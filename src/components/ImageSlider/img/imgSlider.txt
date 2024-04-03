@@ -1,0 +1,114 @@
+import React, { useState, useEffect } from "react";
+const ImageSlider = () => {
+    const sliderStyles = {
+    //   position: "relative",
+      height: "100%",
+    };
+const slideStyles = {
+  width: "100%",
+  height: "100%",
+  borderRadius: "10px",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+};
+
+
+const rightArrowStyles = {
+  position: "absolute",
+  top: "50%",
+  transform: "translate(0, -50%)",
+  right: "32px",
+  fontSize: "45px",
+  color: "#fff",
+  zIndex: 1,
+  cursor: "pointer",
+};
+
+const leftArrowStyles = {
+  position: "absolute",
+  top: "50%",
+  transform: "translate(0, -50%)",
+  left: "32px",
+  fontSize: "45px",
+  color: "#fff",
+  zIndex: 1,
+  cursor: "pointer",
+};
+const dotsContainerStyles = {
+  display: "flex",
+  justifyContent: "center",
+};
+
+const dotStyle = {
+  margin: "0 3px",
+  cursor: "pointer",
+  fontSize: "20px",
+};
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slides = [
+    { url: "http://localhost:3000/image-1.jpg", title: "beach" },
+    { url: "http://localhost:3000/image-2.jpg", title: "boat" },
+    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
+    { url: "http://localhost:3000/image-4.jpg", title: "city" },
+    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+  ];
+
+  const previous = () => {
+    const firstSlide = currentIndex === 0;
+    const newIndex = firstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const next = () => {
+    const lastSlide = currentIndex === slides.length - 1;
+    const newIndex = lastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const gotoSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const slideStylesWidthBackground = {
+    ...slideStyles,
+    backgroundImage: `url(${slides[currentIndex].url})`,
+};
+
+  return (
+    <div style={sliderStyles}>
+      <div>
+        <div onClick={previous} style={leftArrowStyles}>
+          ❰
+        </div>
+        <div onClick={() => { next(); console.log("next",slides[currentIndex]); }} style={rightArrowStyles}>
+          ❱
+        </div>
+      </div>
+      <div style={slideStylesWidthBackground}></div>
+      <div style={dotsContainerStyles}>
+        {slides.map((slide, slideIndex) => (
+          <div
+            style={dotStyle}
+            key={slideIndex}
+            onClick={() => gotoSlide(slideIndex)}
+          >
+            ●
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;

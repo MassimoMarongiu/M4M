@@ -1,0 +1,205 @@
+
+.postPageDiv {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(41, 38, 38);
+  margin-bottom: 41%;
+  
+}
+
+.postPageArticle {
+  /* margin-top: 40px;
+  margin-left: 20%; */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.title_date {
+  display: flex;
+  flex-direction: row;
+}
+.postTitle {
+  align-items: left;
+  /* margin-left: -50px; */
+}
+.postDate {
+  margin-left: 500px;
+}
+.postBody {
+  text-align: justify; /* Aggiungi questa riga per giustificare il testo */
+}
+.postImg{
+  width: 300px;
+  height: 300px;
+}
+
+.modifica_elimina_btn {
+  margin-top: 50px;
+  /* display: flex;
+    flex-direction: row; */
+  margin-left: 100px;
+}
+/* editButton */
+.editButton {
+  margin-left: 200px;
+  color: #f3ebeb;
+  line-height: 0.1;
+  height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(22, 33, 197);
+}
+
+.editButton--gooey {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #160489;
+  border-radius: 5px;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.editButton--gooey .editButton__blobs {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.editButton--gooey .editButton__blobs div {
+  background-color: #167b0d;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.editButton--gooey .editButton__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.editButton--gooey .editButton__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.editButton--gooey .editButton__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.editButton--gooey:hover {
+  color: #ebe1e1;
+}
+
+.editButton--gooey:hover .editButton__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+/* delete_btn */
+.deleteButton {
+  /* margin-left: 10px; */
+  color: #f3ebeb;
+  line-height: 0.1;
+  height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(210, 11, 11);
+}
+
+.deleteButton--gooey {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #7a0101;
+  border-radius: 5px;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.deleteButton--gooey .deleteButton__blobs {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.deleteButton--gooey .deleteButton__blobs div {
+  background-color: #e42323;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.deleteButton--gooey .deleteButton__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.deleteButton--gooey .deleteButton__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.deleteButton--gooey .deleteButton__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.deleteButton--gooey:hover {
+  color: #ebe1e1;
+}
+
+.deleteButton--gooey:hover .deleteButton__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+@media screen and (max-width: 768px) {
+  .postTitle,
+  .postDate,
+  .postBody,
+  .editButton,
+  .deleteButton {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto; /* Resetta il margine a "auto" per centrare il titolo su schermi più piccoli */
+    text-align: center; /* Centra il testo */
+    margin-bottom: 5px;
+  }
+}
+/* postDate
+
+modifica_elimina_btn
+editButton
+deleteButton */

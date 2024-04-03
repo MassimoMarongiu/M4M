@@ -1,0 +1,9 @@
+.editPost {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(41, 38, 38);
+  color: aliceblue;
+
+  margin-left: -30%;
+  padding-bottom: 0%;
+}

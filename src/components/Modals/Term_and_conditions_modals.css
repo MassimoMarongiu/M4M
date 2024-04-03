@@ -1,0 +1,25 @@
+.modal_term_conditions{
+    background-color: transparent;
+}
+.accettaRifiutaButton{
+    display: flex;
+    flex-direction: row;
+}
+.modal_term_conditions_header,.modal_term_conditions_body,.pmodal,.amodal
+,.accettaRifiutaButton, .modalTitle{
+    background-color: antiquewhite;
+
+}
+@media screen and (max-width: 986px) {
+    .modal_term_conditions {
+        width: 80%;
+        /* position: relative; */
+        /*
+        bottom: 50%; */
+        top: 22%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+      }
+
+}

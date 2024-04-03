@@ -1,0 +1,32 @@
+.allpost {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.Link {
+    text-decoration: none;
+  }
+.posthead {
+    flex-direction: column;
+    color: aliceblue;
+}
+
+.postbody {
+    flex-direction: column;
+    text-align: justify;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.postBodyTxt{
+    width: 50%;
+}
+.postDate {
+    text-align: right;
+  }
+ @media screen and (max-width: 986px) {
+    .allpost{
+        flex-direction: column;
+    } 
+
+} 
+

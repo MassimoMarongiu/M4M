@@ -1,0 +1,77 @@
+.containerContatti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(41, 38, 38);
+    color: aliceblue;
+    justify-content: center;
+    padding-top: 4%;
+    margin-bottom: 4%;
+    /* padding: 30px; */
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Paragraph styles */
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Textarea styles */
+  textarea {
+    width: 200%;
+    height: 200%;
+    margin-bottom: 10px;
+    
+  }
+  
+  /* Input styles */
+  input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Button styles */
+  button {
+    width: 150px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+
+  @media screen and (max-width: 768px) {
+    .containerContatti {
+      margin-bottom: 5%;
+      width: 100%; 
+    }
+  textarea{
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  
